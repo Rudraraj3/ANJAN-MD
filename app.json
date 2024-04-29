@@ -1,0 +1,116 @@
+{
+  "name": "NEZUKO-MD",
+  "description": "whatsapp md bot build with nodejs",
+  "repository": "https://github.com/godzenitsu/NEZUKO-MD",
+  "logo": "https://i.imgur.com/jNy5AIn.jpeg",
+  "keywords": ["nodejs", "Queen-nezuko", "whatsapp bot", "nezuko", "multi device"],
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "to run the bot",
+      "required": true,
+      "value": ""
+    },
+    "HEROKU_API_KEY": {
+      "description": "For updating bot and setting vars remotely",
+      "required": true,
+      "value": ""
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Exact name which you gave at the top",
+      "required": true,
+      "value": ""
+    },
+    "MODE": {
+      "description": "enter bot mode must be public/private",
+      "required": true,
+      "value": "public"
+    },
+    "BOT_INFO": {
+      "description": "baasic bot configration",
+      "required": true,
+      "value": "Gᴏᴅ-Zᴇɴɪᴛꜱᴜ;Qᴜᴇᴇɴ-Nᴇᴢᴜᴋᴏ;https://graph.org/file/3879cf1910f65bd8457d7.jpg"
+    },
+    "PREFIX": {
+      "description": "bot preifx  ., [.,!], false",
+      "required": true,
+      "value": "."
+    },
+    "AUTO_READ": {
+      "description": "Automatically Reading Your Messages",
+      "required": true,
+      "value": "false"
+    },
+    "AUTO_REACT": {
+      "description": "Automatically Reaction Messages",
+      "required": true,
+      "value": "false"
+    },
+    "AUDIO_DATA": {
+      "description": "audio metadata",
+      "required": true,
+      "value": "NEZUKO-MD;ZENITSU;https://i.imgur.com/jNy5AIn.jpeg"
+    },
+    "STICKER_DATA": {
+      "description": "sticker data",
+      "required": true,
+      "value": "ZENITSU;NEZUKO"
+    },
+    "PM_MESSAGE": {
+      "description": "personal greetings for first message ",
+      "required": true,
+      "value": "this is a bot, owner is bussy with something"
+    },
+    "REJECT_CALL": {
+      "description": "automatic reject call",
+      "required": true,
+      "value": "false"
+    },
+    "WARN": {
+      "description": "warn count",
+      "required": true,
+      "value": "4"
+    },
+    "SUDO": {
+      "description": "secounds owners of bot",
+      "required": true,
+      "value": "null"
+    },
+    "GPJOIN": {
+      "description": "automatically join to all groups",
+      "required": true,
+      "value": "false"
+    },
+    "SAVE_STATUS": {
+      "description": "save all status message",
+      "required": true,
+      "value": "null"
+    },
+    "STATUS_VIEW": {
+      "description": "status views, values= true,only-view=jid, not-view=jid",
+      "required": true,
+      "value": "false"
+    },
+    "ERROR_MSG": {
+      "description": "send error messages to bot number",
+      "required": true,
+      "value": "true"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+"buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+]
+}
