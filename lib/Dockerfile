@@ -1,5 +1,5 @@
-FROM quay.io/afx-abu/abu-md
-RUN git clone https://github.com/godzenitsu/NEZUKO-MD /root/Abu/
-WORKDIR /root/Abu/
+FROM quay.io/loki-xer/jarvis-md:latest
+RUN git clone https://github.com/godzenitsu/NEZUKO-MD /root/bot/
+WORKDIR /root/bot/
 RUN yarn install --network-concurrency 1
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
